@@ -1,0 +1,13 @@
+$color1: #333;
+$color2: #fff;
+
+body {
+	background-color: $color1;
+	color: $color2;
+}
+
+#app {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

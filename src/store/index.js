@@ -1,13 +1,15 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
+import models from "./models.js";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		startMesague: "Приветик"
+		startMesague: "Приветик модуль"
 	},
-	mutations: {},
-	actions: {},
-	modules: {}
+	modules: {
+		models
+	}
 });

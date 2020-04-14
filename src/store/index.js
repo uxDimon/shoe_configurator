@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import models from "./models.js";
+import models from "./models";
+import colorChoiceManu from "./colorChoiceManu";
 
 Vue.use(Vuex);
 
@@ -10,6 +11,7 @@ export default new Vuex.Store({
 		startMesague: "Приветик модуль"
 	},
 	modules: {
-		models
+		models,
+		colorChoiceManu
 	}
 });

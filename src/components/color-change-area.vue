@@ -3,10 +3,10 @@
     <button
       v-for="(area, name) of modelChangeArea"
       :key="name"
-      @click="showChoiceManu(area, name)"
+      @click="showChoiceManu(name, area)"
     >{{name}}</button>
 
-    <app-color-choice-manu :areaColor="choiceManuArea" :name="choiceManuName"></app-color-choice-manu>
+    <app-color-choice-manu></app-color-choice-manu>
   </div>
 </template>
 
@@ -14,15 +14,9 @@
 import ColorChoiceManu from "./color-choice-manu.vue";
 
 export default {
-  data() {
-    return {
-      choiceManuName: "",
-      choiceManuArea: ""
-    };
-  },
   methods: {
-    showChoiceManu(area, name) {
-      return (this.choiceManuName = name), (this.choiceManuArea = area);
+    showChoiceManu(name, area) {
+      this.$store.commit("addData", { name, area });
     }
   },
   computed: {

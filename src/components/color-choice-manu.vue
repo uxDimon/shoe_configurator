@@ -1,22 +1,26 @@
 <template>
-  <div class="color-choice-manu" v-if="name != ''">
-    <h3>{{name}}</h3>
-    <button @click="clearProps">Назад</button>
+  <div class="color-choice-manu" v-if="getData.name != ''">
+    <h3>{{getData.name}}</h3>
+    <button @click="deleteData">Назад</button>
     <div
       class="testC"
-      v-for="(value, key) of areaColor"
+      v-for="(color, key) of getData.area"
       :key="key.index"
-      :style="{backgroundColor: value}"
-    >{{key}} {{value}}</div>
+      :style="{backgroundColor: color}"
+    >{{key}} {{color}}</div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["areaColor", "name"],
   methods: {
-    clearProps() {
-      return (this.areaColor = ""), (this.name = "");
+    deleteData() {
+      this.$store.commit("deleteData");
+    }
+  },
+  computed: {
+    getData() {
+      return this.$store.state.colorChoiceManu;
     }
   }
 };

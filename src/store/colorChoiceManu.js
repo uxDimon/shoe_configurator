@@ -10,7 +10,7 @@ export default {
 			state.area = payload.area;
 			state.show = true;
 		},
-		deleteData(state) {
+		hideChoiceManu(state) {
 			state.show = false;
 		},
 	},

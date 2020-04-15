@@ -1,21 +1,25 @@
 <template>
   <div class="color-choice-manu" v-if="getData.show">
     <h3>{{getData.name}}</h3>
-    <button @click="deleteData">Назад</button>
+    <button @click="hideChoiceManu">Назад</button>
     <div
       class="testC"
-      v-for="(color, key) of getData.area"
-      :key="key.index"
+      v-for="(color, name) of getData.area"
+      :key="name.index"
       :style="{backgroundColor: color}"
-    >{{key}} {{color}}</div>
+      @click="giveColorCustomObject(getData.name, color)"
+    >{{name}} {{color}}</div>
   </div>
 </template>
 
 <script>
 export default {
   methods: {
-    deleteData() {
-      this.$store.commit("deleteData");
+    hideChoiceManu() {
+      this.$store.commit("hideChoiceManu");
+    },
+    giveColorCustomObject(name, color) {
+      this.$store.commit("giveColorCustomObject", { name, color });
     }
   },
   computed: {

@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     modelChangeArea() {
-      return this.$store.state.models.shoeModel0;
+      return this.$store.getters.getActiveCustoObject;
     }
   },
   components: {

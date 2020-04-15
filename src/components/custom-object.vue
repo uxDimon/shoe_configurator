@@ -10,7 +10,7 @@ import __area from "./custom-object__area.vue";
 export default {
   computed: {
     getModel() {
-      return this.$store.state.models.shoeModel0;
+      return this.$store.getters.getActiveCustoObject;
     }
   },
   components: {

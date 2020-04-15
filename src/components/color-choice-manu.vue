@@ -1,5 +1,5 @@
 <template>
-  <div class="color-choice-manu" v-if="getData.name != ''">
+  <div class="color-choice-manu" v-if="getData.show">
     <h3>{{getData.name}}</h3>
     <button @click="deleteData">Назад</button>
     <div

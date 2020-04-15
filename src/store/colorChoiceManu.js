@@ -1,16 +1,17 @@
 export default {
 	state: {
 		name: "",
-		area: ""
+		area: "",
+		show: false,
 	},
 	mutations: {
 		addData(state, payload) {
 			state.name = payload.name;
 			state.area = payload.area;
+			state.show = true;
 		},
 		deleteData(state) {
-			state.name = "";
-			state.area = "";
-		}
-	}
+			state.show = false;
+		},
+	},
 };

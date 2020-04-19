@@ -1,10 +1,6 @@
 <template>
   <div>
-    <button
-      v-for="(area, name) of modelChangeArea"
-      :key="name"
-      @click="showChoiceManu(name, area)"
-    >{{name}}</button>
+    <button v-for="color of modelChangeArea.body.colors" :key="color.id">{{color.name}}</button>
 
     <app-color-choice-manu></app-color-choice-manu>
   </div>

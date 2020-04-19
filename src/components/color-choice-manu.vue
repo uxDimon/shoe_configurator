@@ -1,18 +1,22 @@
 <template>
   <div class="color-choice-manu" v-if="getData.show">
-    <h3>{{getData.name}}</h3>
-    <button @click="hideChoiceManu">Назад</button>
-    <div
+    <h3 class="color-choice-manu__heading">{{getData.name}}</h3>
+    <button @click="hideChoiceManu">
+      <icon-arrow></icon-arrow>Назад
+    </button>
+    <button
       class="testC"
       v-for="(color, name) of getData.area"
       :key="name.index"
       :style="{backgroundColor: color}"
       @click="giveColorCustomObject(getData.name, color)"
-    >{{name}} {{color}}</div>
+    >{{name}}</button>
   </div>
 </template>
 
 <script>
+import iconArrow from "./icons/icon__arrow.vue";
+
 export default {
   methods: {
     hideChoiceManu() {
@@ -26,6 +30,9 @@ export default {
     getData() {
       return this.$store.state.colorChoiceManu;
     }
+  },
+  components: {
+    iconArrow
   }
 };
 </script>

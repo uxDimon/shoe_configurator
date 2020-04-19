@@ -10,7 +10,9 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 	state: {
 		startMesague: "Приветик модуль",
+
 		activeCustoObject: "shoeModel0",
+		activeViewingAngles: "left",
 	},
 	modules: {
 		models,
@@ -18,15 +20,16 @@ export default new Vuex.Store({
 		customObject,
 	},
 	mutations: {
-		addAreasObject(state) {
-			for (let area in state.models.shoeModel0) {
-				Vue.set(state.customObject.areas, area, "#fff");
-			}
+		choiceActiveViewingAngles(state, payload) {
+			state.activeViewingAngles = payload;
 		},
 	},
 	getters: {
 		getActiveCustoObject(state) {
 			return state.models[state.activeCustoObject];
+		},
+		getActiveViewingAngles(state, getters) {
+			return getters.getActiveCustoObject.viewingAngles[state.activeViewingAngles];
 		},
 	},
 });

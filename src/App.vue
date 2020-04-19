@@ -2,13 +2,15 @@
   <div id="app">
     <h1 class="startH">{{start}}</h1>
     <app-color-change-area></app-color-change-area>
+    <app-choice-viewing-angles></app-choice-viewing-angles>
     <app-custom-object></app-custom-object>
   </div>
 </template>
 
 <script>
 import colorChangeArea from "./components/color-change-area.vue";
-import customObject from "./components/custom-object.vue";
+import appCustomObject from "./components/customObject.vue";
+import appChoiceViewingAngles from "./components/choiceViewingAngles.vue";
 
 export default {
   computed: {
@@ -18,7 +20,8 @@ export default {
   },
   components: {
     "app-color-change-area": colorChangeArea,
-    "app-custom-object": customObject
+    appCustomObject,
+    appChoiceViewingAngles
   }
 };
 </script>

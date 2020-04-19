@@ -23,7 +23,7 @@ export default {
 
   div {
     width: 100px;
-    height: 50px;
+    height: 100px;
   }
 }
 </style>

@@ -18,17 +18,13 @@ export default {
 					},
 				},
 				inside: {
-					read: {
-						name: "Красный",
-						hex: "#e53935",
+					pinc: {
+						name: "Розовый",
+						hex: "#E91E63",
 					},
-					blue: {
-						name: "Синий",
-						hex: "#1E88E5",
-					},
-					green: {
-						name: "Зеленый",
-						hex: "#43A047",
+					purple: {
+						name: "Пурпурный",
+						hex: "#9C27B0",
 					},
 				},
 			},

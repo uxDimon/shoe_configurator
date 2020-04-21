@@ -23,6 +23,11 @@ export default new Vuex.Store({
 		choiceActiveViewingAngles(state, payload) {
 			state.activeViewingAngles = payload;
 		},
+		takeAreasCustoObject(state) {
+			for (let area in state.models[state.activeCustoObject].colors) {
+				state.customObject.selectedOptions[area] = state.customObject.default;
+			}
+		},
 	},
 	getters: {
 		getActiveCustoObject(state) {

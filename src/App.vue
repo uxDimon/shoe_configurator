@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import colorChangeArea from "./components/color-change-area.vue";
+import appColorChangeArea from "./components/colorChangeArea.vue";
 import appCustomObject from "./components/customObject.vue";
 import appChoiceViewingAngles from "./components/choiceViewingAngles.vue";
 
@@ -19,9 +19,12 @@ export default {
     }
   },
   components: {
-    "app-color-change-area": colorChangeArea,
+    appColorChangeArea,
     appCustomObject,
     appChoiceViewingAngles
+  },
+  created() {
+    this.$store.commit("takeAreasCustoObject");
   }
 };
 </script>

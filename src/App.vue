@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import appColorChangeArea from "./components/colorChangeArea.vue";
 import appCustomObject from "./components/customObject.vue";
+import appColorChangeArea from "./components/colorChangeArea.vue";
 import appChoiceViewingAngles from "./components/choiceViewingAngles.vue";
 
 export default {
@@ -23,9 +23,12 @@ export default {
     appCustomObject,
     appChoiceViewingAngles
   },
-  created() {
+  beforeCreate() {
     this.$store.commit("takeAreasCustoObject");
   }
+  // created() {
+  //   this.$store.commit("takeAreasCustoObject");
+  // }
 };
 </script>
 

@@ -11,9 +11,4 @@ export default {
 			state.selectedOptions[payload.areaKey] = payload.color;
 		},
 	},
-	getters: {
-		selectColor(state) {
-			return state.selectedOptions;
-		},
-	},
 };

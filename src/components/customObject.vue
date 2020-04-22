@@ -1,29 +1,22 @@
 <template>
   <div class="customObject">
     <div class="customObject_area" v-for="(item, index) of activeViewingAngles" :key="index">
-      <div
-        class="customObject_areaPosition"
-        v-for="(position, indexP) of item.position"
-        :key="indexP"
-        :style="{
-        backgroundImage: 'url('+item.url+')',
-        backgroundPosition: position,
-      }"
-      >{{selectColor}}</div>
+      <app-custom-object-area :index="index" :item="item"></app-custom-object-area>
     </div>
   </div>
 </template>
 
 <script>
+import appCustomObjectArea from "./customObjectArea.vue";
+
 export default {
-  components: {},
+  components: {
+    appCustomObjectArea
+  },
   methods: {},
   computed: {
     activeViewingAngles() {
       return this.$store.getters.getActiveViewingAngles;
-    },
-    selectColor(index) {
-      return this.$store.getters.selectColor(index);
     }
   }
 };
@@ -40,12 +33,12 @@ export default {
   width: 900px;
   height: 900px;
 }
-
 .customObject_areaPosition {
   position: absolute;
   top: 0;
   left: 0;
   width: 900px;
   height: 900px;
+  background-blend-mode: multiply;
 }
 </style>

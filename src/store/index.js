@@ -25,7 +25,7 @@ export default new Vuex.Store({
 		},
 		takeAreasCustoObject(state) {
 			for (let area in state.models[state.activeCustoObject].colors) {
-				state.customObject.selectedOptions[area] = state.customObject.default;
+				Vue.set(state.customObject.selectedOptions, area, state.customObject.default);
 			}
 		},
 	},

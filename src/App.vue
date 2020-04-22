@@ -26,9 +26,6 @@ export default {
   beforeCreate() {
     this.$store.commit("takeAreasCustoObject");
   }
-  // created() {
-  //   this.$store.commit("takeAreasCustoObject");
-  // }
 };
 </script>
 

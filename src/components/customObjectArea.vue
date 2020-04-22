@@ -33,11 +33,12 @@ export default {
 // maskPosition: position,
 // backgroundColor: getColor[index].hex,
 
-// .customObject_areaPosition {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 900px;
-//   height: 900px;
-// }
+.customObject_areaPosition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 900px;
+  background-blend-mode: multiply;
+}
 </style>

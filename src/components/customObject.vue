@@ -1,22 +1,39 @@
 <template>
   <div class="customObject">
-    <div class="customObject_area" v-for="(item, index) of activeViewingAngles" :key="index">
-      <app-custom-object-area :index="index" :item="item"></app-custom-object-area>
+    <div
+      v-for="(viewingAngles, index) in activeCustoObject.viewingAngles"
+      :key="index"
+      v-show="index == activeViewingAngles"
+    >
+      <div class="customObject_area" v-for="(arias, indexA) of viewingAngles" :key="indexA">
+        <div
+          class="customObject_areaPosition"
+          v-for="(position, indexP) of arias.position"
+          :key="indexP"
+          :style="{
+            backgroundImage: 'url(' + arias.url + ')',
+            backgroundPosition: position,
+            maskImage: 'url(' + arias.url + ')',
+            maskPosition: position,
+            backgroundColor: getColor[indexA].hex,
+          }"
+        ></div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import appCustomObjectArea from "./customObjectArea.vue";
-
 export default {
-  components: {
-    appCustomObjectArea
-  },
-  methods: {},
   computed: {
+    activeCustoObject() {
+      return this.$store.getters.getActiveCustoObject;
+    },
+    getColor() {
+      return this.$store.state.customObject.selectedOptions;
+    },
     activeViewingAngles() {
-      return this.$store.getters.getActiveViewingAngles;
+      return this.$store.state.activeViewingAngles;
     }
   }
 };
@@ -33,6 +50,7 @@ export default {
   width: 900px;
   height: 900px;
 }
+
 .customObject_areaPosition {
   position: absolute;
   top: 0;

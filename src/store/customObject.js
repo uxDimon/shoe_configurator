@@ -6,4 +6,14 @@ export default {
 			hex: "#fff",
 		},
 	},
+	mutations: {
+		choiceColor(state, payload) {
+			state.selectedOptions[payload.areaKey] = payload.color;
+		},
+	},
+	getters: {
+		selectColor(state) {
+			return state.selectedOptions;
+		},
+	},
 };

@@ -3,13 +3,13 @@
     <div class="customObject_area" v-for="(item, index) of activeViewingAngles" :key="index">
       <div
         class="customObject_areaPosition"
-        v-for="(position, index) of item.position"
-        :key="index"
+        v-for="(position, indexP) of item.position"
+        :key="indexP"
         :style="{
         backgroundImage: 'url('+item.url+')',
         backgroundPosition: position,
       }"
-      ></div>
+      >{{selectColor}}</div>
     </div>
   </div>
 </template>
@@ -21,6 +21,9 @@ export default {
   computed: {
     activeViewingAngles() {
       return this.$store.getters.getActiveViewingAngles;
+    },
+    selectColor(index) {
+      return this.$store.getters.selectColor(index);
     }
   }
 };

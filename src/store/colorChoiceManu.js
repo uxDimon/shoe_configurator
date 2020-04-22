@@ -1,17 +1,17 @@
 export default {
 	state: {
-		name: "",
-		area: "",
-		show: false,
+		areaData: "",
+		areaKey: "",
+		showManu: false,
 	},
 	mutations: {
 		addData(state, payload) {
-			state.name = payload.name;
-			state.area = payload.area;
-			state.show = true;
+			state.areaData = payload.area;
+			state.areaKey = payload.key;
+			state.showManu = true;
 		},
-		hideChoiceManu(state) {
-			state.show = false;
+		hideManu(state) {
+			state.showManu = false;
 		},
 	},
 };

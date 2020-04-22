@@ -3,9 +3,9 @@
     <button
       v-for="(area, key) of activeCustoObject.colors"
       :key="key"
-      @click="addData(area)"
+      @click="addData(area, key)"
     >{{key}}</button>
-    <app-color-change-manu :area="areaData"></app-color-change-manu>
+    <app-color-change-manu></app-color-change-manu>
   </div>
 </template>
 
@@ -13,14 +13,9 @@
 import appColorChangeManu from "./colorChangeManu.vue";
 
 export default {
-  data() {
-    return {
-      areaData: ""
-    };
-  },
   methods: {
-    addData(area) {
-      return (this.areaData = area);
+    addData(area, key) {
+      this.$store.commit("addData", { area, key });
     }
   },
   computed: {

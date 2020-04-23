@@ -24,7 +24,21 @@ export default {
 					},
 					purple: {
 						name: "Пурпурный",
-						hex: "#9C27B0",
+						hex: "#BA68C8",
+						positionColor: {
+							inside_labelLogo: "#fff",
+							inside_label: "#8E24AA",
+							inside_sideBot: "#AB47BC",
+							inside_sideTop: "#AB47BC",
+						},
+					},
+					lightBlue: {
+						name: "Светлоголубой",
+						hex: "#4FC3F7",
+						positionColor: {
+							inside_labelLogo: "#01579B",
+							inside_label: "#039BE5",
+						},
 					},
 				},
 			},
@@ -33,18 +47,18 @@ export default {
 					body: {
 						url: require("./models/shoeModel0/left/left__body.webp"),
 						position: {
-							top: "0 0",
-							grid: "-900px 0",
-							main: "-1800px 0",
+							body_main: "-1800px 0",
+							body_grid: "-900px 0",
+							body_top: "0 0",
 						},
 					},
 					inside: {
 						url: require("./models/shoeModel0/left/left__inside.webp"),
 						position: {
-							label: "0 0",
-							tongue: "-900px 0",
-							sideTop: "-1800px 0",
-							sideBot: "-2700px 0",
+							inside_sideBot: "-2700px 0",
+							inside_sideTop: "-1800px 0",
+							inside_tongue: "-900px 0",
+							inside_label: "0 0",
 						},
 					},
 				},
@@ -52,19 +66,19 @@ export default {
 					body: {
 						url: require("./models/shoeModel0/anfledView/anfledView__body.webp"),
 						position: {
-							top: "0 0",
-							grid: "-900px 0",
-							main: "-1800px 0",
+							body_main: "-1800px 0",
+							body_grid: "-900px 0",
+							body_top: "0 0",
 						},
 					},
 					inside: {
 						url: require("./models/shoeModel0/anfledView/anfledView__inside.webp"),
 						position: {
-							labelLogo: "0 0",
-							label: "-900px 0",
-							tongue: "-1800px 0",
-							sideTop: "-2700px 0",
-							sideBot: "-3600px 0",
+							inside_sideBot: "-3600px 0",
+							inside_sideTop: "-2700px 0",
+							inside_tongue: "-1800px 0",
+							inside_label: "-900px 0",
+							inside_labelLogo: "0 0",
 						},
 					},
 				},

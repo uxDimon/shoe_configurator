@@ -15,7 +15,7 @@
             backgroundPosition: position,
             maskImage: 'url(' + arias.url + ')',
             maskPosition: position,
-            backgroundColor: getColor[indexA].hex,
+            backgroundColor:areasColor(indexA, indexP),
           }"
         ></div>
       </div>
@@ -34,6 +34,17 @@ export default {
     },
     activeViewingAngles() {
       return this.$store.state.activeViewingAngles;
+    }
+  },
+  methods: {
+    areasColor(indexA, indexP) {
+      let positionColor = this.getColor[indexA].positionColor;
+      for (let item in positionColor) {
+        if (item == indexP) {
+          return positionColor[item];
+        }
+      }
+      return this.getColor[indexA].hex;
     }
   }
 };
@@ -58,5 +69,6 @@ export default {
   width: 900px;
   height: 900px;
   background-blend-mode: multiply;
+  transition: background-color 100ms ease-in 0ms;
 }
 </style>

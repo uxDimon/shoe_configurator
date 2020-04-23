@@ -9,7 +9,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		startMesague: "Приветик модуль",
+		startMesague: "Привет Богатеище!!!",
 
 		activeCustoObject: "shoeModel0",
 		activeViewingAngles: "left",

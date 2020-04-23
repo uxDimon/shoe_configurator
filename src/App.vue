@@ -2,6 +2,7 @@
   <div id="app">
     <h1 class="startH">{{start}}</h1>
     <app-color-change-area></app-color-change-area>
+    <br />
     <app-choice-viewing-angles></app-choice-viewing-angles>
     <app-custom-object></app-custom-object>
   </div>
@@ -30,4 +31,8 @@ export default {
 </script>
 
 <style lang="scss">
+button {
+  padding: 20px 5px;
+  font-size: 35px;
+}
 </style>

@@ -15,7 +15,7 @@
             backgroundPosition: position,
             maskImage: 'url(' + arias.url + ')',
             maskPosition: position,
-            backgroundColor:areasColor(indexA, indexP),
+            backgroundColor: areasColor(indexA, indexP),
           }"
         ></div>
       </div>

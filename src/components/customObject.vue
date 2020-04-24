@@ -6,18 +6,46 @@
       v-show="index == activeViewingAngles"
     >
       <div class="customObject_area" v-for="(arias, indexA) of viewingAngles" :key="indexA">
-        <div
+        <svg
           class="customObject_areaPosition"
           v-for="(position, indexP) of arias.position"
           :key="indexP"
-          :style="{
-            backgroundImage: 'url(' + arias.url + ')',
-            backgroundPosition: position,
-            maskImage: 'url(' + arias.url + ')',
-            maskPosition: position,
-            backgroundColor: areasColor(indexA, indexP),
-          }"
-        ></div>
+          width="900"
+          height="900"
+          viewBox="0 0 900 900"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <mask
+            :id="'mask' + index + indexP + indexA"
+            mask-type="alpha"
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="900"
+            height="900"
+          >
+            <rect width="900" height="900" :fill="'url(#pattern' + index + indexP + indexA +')'" />
+          </mask>
+          <g :mask="'url(#mask' + index + indexP + indexA +')'">
+            <rect width="900" height="900" :fill="areasColor(indexA, indexP)" />
+            <g style="mix-blend-mode: multiply;">
+              <rect width="900" height="900" :fill="'url(#pattern' + index + indexP + indexA +')'" />
+            </g>
+          </g>
+          <defs>
+            <pattern
+              :id="'pattern' + index + indexP + indexA"
+              patternContentUnits="objectBoundingBox"
+              width="1"
+              height="1"
+            >
+              <use :xlink:href="'#' + index + indexP + indexA" transform="scale(0.00111111)" />
+            </pattern>
+            <image :id="index + indexP + indexA" :x="position" :xlink:href="arias.url" />
+          </defs>
+        </svg>
       </div>
     </div>
   </div>
@@ -68,7 +96,7 @@ export default {
   left: 0;
   width: 900px;
   height: 900px;
-  background-blend-mode: multiply;
-  transition: background-color 100ms ease-in 0ms;
+  // background-blend-mode: multiply;
+  // transition: background-color 100ms ease-in 0ms;
 }
 </style>

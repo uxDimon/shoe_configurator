@@ -5,9 +5,9 @@
       :key="index"
       v-show="index == activeViewingAngles"
     >
-      <div class="customObject_area" v-for="(arias, indexA) of viewingAngles" :key="indexA">
+      <div class="customObject__area" v-for="(arias, indexA) of viewingAngles" :key="indexA">
         <svg
-          class="customObject_areaPosition"
+          class="customObject__areaPosition customObjectSvg"
           v-for="(position, indexP) of arias.position"
           :key="indexP"
           width="900"
@@ -29,8 +29,13 @@
             <rect width="900" height="900" :fill="'url(#pattern' + index + indexP + indexA +')'" />
           </mask>
           <g :mask="'url(#mask' + index + indexP + indexA +')'">
-            <rect width="900" height="900" :fill="areasColor(indexA, indexP)" />
-            <g style="mix-blend-mode: multiply;">
+            <rect
+              width="900"
+              height="900"
+              :fill="areasColor(indexA, indexP)"
+              class="customObjectSvg__colorLaer"
+            />
+            <g class="customObjectSvg__multiplyLaer">
               <rect width="900" height="900" :fill="'url(#pattern' + index + indexP + indexA +')'" />
             </g>
           </g>
@@ -82,7 +87,7 @@ export default {
 .customObject {
   position: relative;
 }
-.customObject_area {
+.customObject__area {
   position: absolute;
   top: 0;
   left: 0;
@@ -90,13 +95,19 @@ export default {
   height: 900px;
 }
 
-.customObject_areaPosition {
+.customObject__areaPosition {
   position: absolute;
   top: 0;
   left: 0;
   width: 900px;
   height: 900px;
-  // background-blend-mode: multiply;
-  // transition: background-color 100ms ease-in 0ms;
+}
+
+.customObjectSvg__colorLaer {
+  transition: fill 100ms ease-in 0ms;
+}
+
+.customObjectSvg__multiplyLaer {
+  mix-blend-mode: multiply;
 }
 </style>

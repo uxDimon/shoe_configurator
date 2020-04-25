@@ -34,8 +34,7 @@ export default {
 						positionColor: {
 							inside_labelLogo: "#fff",
 							inside_label: "#8E24AA",
-							inside_sideBot: "#AB47BC",
-							inside_sideTop: "#AB47BC",
+							inside_side: "#AB47BC",
 						},
 					},
 					lightBlue: {
@@ -101,16 +100,14 @@ export default {
 					body: {
 						url: require("./models/shoeModel0/left/left__body.webp"),
 						position: {
-							body_main: "-1800",
-							body_grid: "-900",
+							body_main: "-900",
 							body_top: "0",
 						},
 					},
 					inside: {
 						url: require("./models/shoeModel0/left/left__inside.webp"),
 						position: {
-							inside_sideBot: "-2700",
-							inside_sideTop: "-1800",
+							inside_side: "-1800",
 							inside_tongue: "-900",
 							inside_label: "0",
 						},
@@ -162,16 +159,14 @@ export default {
 					body: {
 						url: require("./models/shoeModel0/anfledView/anfledView__body.webp"),
 						position: {
-							body_main: "-1800",
-							body_grid: "-900",
+							body_main: "-900",
 							body_top: "0",
 						},
 					},
 					inside: {
 						url: require("./models/shoeModel0/anfledView/anfledView__inside.webp"),
 						position: {
-							inside_sideBot: "-3600",
-							inside_sideTop: "-2700",
+							inside_side: "-2700",
 							inside_tongue: "-1800",
 							inside_label: "-900",
 							inside_labelLogo: "0",
@@ -231,16 +226,14 @@ export default {
 					body: {
 						url: require("./models/shoeModel0/right/right__body.webp"),
 						position: {
-							body_main: "-1800",
-							body_grid: "-900",
+							body_main: "-900",
 							body_top: "0",
 						},
 					},
 					inside: {
 						url: require("./models/shoeModel0/right/right__inside.webp"),
 						position: {
-							inside_sideBot: "-2700",
-							inside_sideTop: "-1800",
+							inside_side: "-1800",
 							inside_tongue: "-900",
 							inside_label: "0",
 						},
@@ -299,6 +292,132 @@ export default {
 					// 		ssss: "0",
 					// 	},
 					// },
+				},
+				fromAbove: {
+					body: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__body.webp"),
+						position: {
+							body_main: "-900",
+							body_top: "0",
+						},
+					},
+					inside: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__inside.webp"),
+						position: {
+							inside_insole: "-3600",
+							inside_side: "-2700",
+							inside_tongue: "-1800",
+							inside_label: "-900",
+							inside_labelLogo: "0",
+						},
+					},
+					logoFront: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__logoFront.webp"),
+						position: {
+							logoFront: "0",
+						},
+					},
+					side: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__side.webp"),
+						position: {
+							side: "0",
+						},
+					},
+					sideLogo: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__sideLogo.webp"),
+						position: {
+							sideLogo: "0",
+						},
+					},
+					shoelace: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__shoelace.webp"),
+						position: {
+							shoelace: "0",
+						},
+					},
+					shoelaceYarn: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__shoelaceYarn.webp"),
+						position: {
+							shoelaceYarn: "0",
+						},
+					},
+					soleFront: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__soleFront.webp"),
+						position: {
+							soleFront: "0",
+						},
+					},
+					soleBeck: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__soleBeck.webp"),
+						position: {
+							soleBeck: "0",
+						},
+					},
+					sole: {
+						url: require("./models/shoeModel0/fromAbove/fromAbove__sole.webp"),
+						position: {
+							sole: "0",
+						},
+					},
+				},
+				behind: {
+					body: {
+						url: require("./models/shoeModel0/behind/behind__body.webp"),
+						position: {
+							body: "0",
+						},
+					},
+					inside: {
+						url: require("./models/shoeModel0/behind/behind__inside.webp"),
+						position: {
+							inside: "0",
+						},
+					},
+					side: {
+						url: require("./models/shoeModel0/behind/behind__side.webp"),
+						position: {
+							side: "0",
+						},
+					},
+					sideLogo: {
+						url: require("./models/shoeModel0/behind/behind__sideLogo.webp"),
+						position: {
+							sideLogo: "0",
+						},
+					},
+					sideText: {
+						url: require("./models/shoeModel0/behind/behind__sideText.webp"),
+						position: {
+							sideText: "0",
+						},
+					},
+					soleBeck: {
+						url: require("./models/shoeModel0/behind/behind__soleBeck.webp"),
+						position: {
+							soleBeck: "0",
+						},
+					},
+					sole: {
+						url: require("./models/shoeModel0/behind/behind__sole.webp"),
+						position: {
+							sole: "0",
+						},
+					},
+				},
+				heel: {
+					soleBeck: {
+						url: require("./models/shoeModel0/heel/heel__soleBeck.webp"),
+						position: {
+							soleBeck: "0",
+						},
+					},
+					sole: {
+						url: require("./models/shoeModel0/heel/heel__sole.webp"),
+						position: {
+							sole_main: "-900",
+							sole_logo: "0",
+						},
+					},
 				},
 			},
 		},

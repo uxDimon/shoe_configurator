@@ -13,12 +13,7 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
       >
-        <g
-          class="customObject__area"
-          v-for="(arias, indexA) of viewingAngles"
-          :key="indexA"
-          :filter="f1"
-        >
+        <g class="customObject__area" v-for="(arias, indexA) of viewingAngles" :key="indexA">
           <g
             class="customObject__areaPosition customObjectSvg"
             v-for="(position, indexP) of arias.position"
@@ -67,6 +62,31 @@
             </defs>
           </g>
         </g>
+        <g v-if="index == activeViewingAngles">
+          <pattern
+            id="patternArea"
+            fill="none"
+            width="10"
+            height="10"
+            patternUnits="userSpaceOnUse"
+          >
+            >
+            <g fill="#222222">
+              <polygon points="9 0 10 0 0 10 0 9" />
+              <polygon points="10 9 10 10 9 10" />
+            </g>
+          </pattern>
+          <g v-for="(arias, indexC) of viewingAngles" :key="indexC">
+            <path
+              class="customObject__borderArea"
+              v-if="arias.vectorP"
+              :d="arias.vectorP"
+              fill="rgba(0, 0, 0, 0)"
+              fill-rule="evenodd"
+              @click="addData(activeCustoObject.colors[indexC], indexC)"
+            />
+          </g>
+        </g>
       </svg>
     </div>
   </div>
@@ -97,39 +117,31 @@ export default {
         }
       }
       return this.getColor[indexA].hex;
+    },
+    addData(area, key) {
+      this.$store.commit("addData", { area, key });
     }
   }
 };
 </script>
 
 <style lang="scss">
-// .customObject {
-//   position: relative;
-// }
-// .customObject__area {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 900px;
-//   height: 900px;
-// }
-
-// .customObject__areaPosition {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 900px;
-//   height: 900px;
-// }
-
 .customObjectSvg__colorLaer {
-  transition: fill 100ms ease-in 0ms;
+  transition: fill 50ms ease-in 0ms;
 }
 
 .customObjectSvg__multiplyLaer {
   mix-blend-mode: multiply;
 }
 
-.customObjectSvg__masskLaer {
+.customObject__borderArea {
+  stroke-width: 1;
+  transition: 100ms ease-in 0ms;
+  transition-property: fill;
+  cursor: pointer;
+
+  &:hover {
+    fill: url(#patternArea);
+  }
 }
 </style>

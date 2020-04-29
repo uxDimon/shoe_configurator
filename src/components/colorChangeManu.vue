@@ -1,11 +1,21 @@
 <template>
-  <div v-show="showManu">
-    <button @click="cleanData">Назад</button>
+  <div v-show="showManu" class="colorChangeManu">
+    <button class="colorChangeManu__button areaButton areaButton_100" @click="cleanData">Назад</button>
     <button
+      class="colorChangeManu__button colorButton"
       v-for="(color, index) in areaData"
       :key="index"
       @click="choiceColor(color, areaKey)"
-    >{{color.name}}</button>
+    >
+      <div class="colorButton__color" :style="{backgroundColor: color.hex}">
+        <div
+          class="colorButton__border"
+          v-show="selectedColorArea[areaKey].hex == color.hex"
+          :style="{borderColor: color.hex}"
+        ></div>
+      </div>
+      {{color.name}}
+    </button>
   </div>
 </template>
 
@@ -28,7 +38,48 @@ export default {
     },
     areaKey() {
       return this.$store.state.colorChoiceManu.areaKey;
+    },
+    selectedColorArea() {
+      return this.$store.state.customObject.selectedOptions;
     }
   }
 };
 </script>
+
+<style lang="scss">
+.colorChangeManu {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.colorButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  border: none;
+  width: 50%;
+}
+
+.colorButton__color {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  margin-bottom: 10px;
+}
+
+.colorButton__border {
+  position: absolute;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border-radius: 100px;
+  border: 3px solid;
+}
+</style>

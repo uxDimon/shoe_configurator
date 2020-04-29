@@ -1,7 +1,18 @@
-$color1: #333;
-$color2: #fff;
+// Шрифт
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+$bacColor: #f0f0f0;
+$textColor: #333333;
+$fontFamily1: "Inter", sans-serif;
 
 body {
-	background-color: $color1;
-	color: $color2;
+	margin: 0;
+	background-color: $bacColor;
+	font-family: $fontFamily1;
+	color: $textColor;
+}
+
+.mainWrap {
+	width: 1170px;
+	margin: 0 auto;
 }

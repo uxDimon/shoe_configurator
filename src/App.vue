@@ -1,10 +1,13 @@
 <template>
-  <div id="app">
+  <div id="app" class="shoeConfig">
     <h1 class="startH">{{start}}</h1>
-    <app-color-change-area></app-color-change-area>
-    <br />
-    <app-choice-viewing-angles></app-choice-viewing-angles>
-    <app-custom-object></app-custom-object>
+    <div class="shoeConfig__wrap">
+      <div class="shoeConfig__object">
+        <app-custom-object></app-custom-object>
+        <app-choice-viewing-angles></app-choice-viewing-angles>
+      </div>
+      <app-color-change-area></app-color-change-area>
+    </div>
   </div>
 </template>
 
@@ -31,8 +34,18 @@ export default {
 </script>
 
 <style lang="scss">
-button {
-  padding: 20px 5px;
-  font-size: 35px;
+.startH {
+  width: 100%;
+  font-variation-settings: "wdth" 900, "wght" 98;
+}
+
+.shoeConfig__wrap {
+  display: flex;
+  align-items: stretch;
+  height: 900px;
+}
+
+.shoeConfig__object {
+  width: 900px;
 }
 </style>

@@ -4,7 +4,6 @@ export default {
 		default: {
 			name: "Стандарт",
 			hex: "#fff",
-			// positionColor: {},
 		},
 	},
 	mutations: {

@@ -126,6 +126,10 @@ export default {
 </script>
 
 <style lang="scss">
+.test111 {
+  box-shadow: 0px 0px 10px #000000;
+}
+
 .customObjectSvg__colorLaer {
   transition: fill 50ms ease-in 0ms;
 }

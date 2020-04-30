@@ -7,17 +7,43 @@ export default {
 					name: "Основа",
 					previewUrl: require("./models/shoeModel0/areasPreview/body.webp"),
 					colorsArea: {
-						read: {
+						white: {
+							name: "Белый",
+							hex: "#EFEFEF",
+							positionColor: {
+								// Для создания полутонов у областей которые состоят из спрайтов.
+								// Ключ = (такой же точно как в "viewingAngles.ОБЛАСТЬ.position"), значение = цвет.
+								// Если область не указывать то цвет возьмет из "hex".
+								body_top: "#FFFFFF",
+							},
+						},
+						black: {
+							name: "Черный",
+							hex: "#363636",
+							positionColor: {
+								body_top: "#2B2B2B",
+							},
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFD54F",
+							positionColor: {
+								body_top: "#FFDC6A",
+							},
+						},
+						red: {
 							name: "Красный",
-							hex: "#e53935",
+							hex: "#F7433F",
+							positionColor: {
+								body_top: "#E93532",
+							},
 						},
-						blue: {
-							name: "Синий",
-							hex: "#1E88E5",
-						},
-						green: {
-							name: "Зеленый",
-							hex: "#43A047",
+						teal: {
+							name: "Чирок",
+							hex: "#4DB6AC",
+							positionColor: {
+								body_top: "#61CEC4",
+							},
 						},
 					},
 				},
@@ -25,25 +51,52 @@ export default {
 					name: "Язычок / Внутренний слой",
 					previewUrl: require("./models/shoeModel0/areasPreview/inside.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
-						},
-						purple: {
-							name: "Пурпурный",
-							hex: "#BA68C8",
+						white: {
+							name: "Белый",
+							hex: "#EFEFEF",
 							positionColor: {
-								inside_labelLogo: "#fff",
-								inside_label: "#8E24AA",
-								inside_side: "#AB47BC",
+								inside_insole: "#FFFFFF",
+								inside_label: "#FFFFFF",
+								inside_labelLogo: "#848484",
 							},
 						},
-						lightBlue: {
-							name: "Светлоголубой",
-							hex: "#4FC3F7",
+						black: {
+							name: "Черный",
+							hex: "#343434",
 							positionColor: {
-								inside_labelLogo: "#01579B",
-								inside_label: "#039BE5",
+								inside_insole: "#FFFFFF",
+								inside_side: "#2D2D2D",
+								inside_label: "#2E2E2E",
+								inside_labelLogo: "#DCDCDC",
+							},
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFDB68",
+							positionColor: {
+								inside_insole: "#FFFFFF",
+								inside_side: "#FFCE33",
+								inside_label: "#FFCA22",
+								inside_labelLogo: "#FFFFFF",
+							},
+						},
+						red: {
+							name: "Красный",
+							hex: "#F7433F",
+							positionColor: {
+								inside_insole: "#FFFFFF",
+								inside_side: "#EF3A37",
+								inside_labelLogo: "#FFFFFF",
+							},
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#60C1B8",
+							positionColor: {
+								inside_insole: "#FFFFFF",
+								inside_side: "#40B0A5",
+								inside_label: "#64E6D9",
+								inside_labelLogo: "#4DB6AC",
 							},
 						},
 					},
@@ -52,9 +105,25 @@ export default {
 					name: "Бортик лого",
 					previewUrl: require("./models/shoeModel0/areasPreview/sideLogo.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#FFFFFF",
+						},
+						black: {
+							name: "Черный",
+							hex: "#292929",
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFD54F",
+						},
+						red: {
+							name: "Красный",
+							hex: "#FA3632",
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#4DB6AC",
 						},
 					},
 				},
@@ -62,9 +131,25 @@ export default {
 					name: "Бортик текст",
 					previewUrl: require("./models/shoeModel0/areasPreview/none.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#FFFFFF",
+						},
+						black: {
+							name: "Черный",
+							hex: "#292929",
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFD54F",
+						},
+						red: {
+							name: "Красный",
+							hex: "#FA3632",
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#4DB6AC",
 						},
 					},
 				},
@@ -72,9 +157,25 @@ export default {
 					name: "Бортик",
 					previewUrl: require("./models/shoeModel0/areasPreview/side.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#E7E7E7",
+						},
+						black: {
+							name: "Черный",
+							hex: "#313131",
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFCD2F",
+						},
+						red: {
+							name: "Красный",
+							hex: "#EC332F",
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#43A399",
 						},
 					},
 				},
@@ -82,9 +183,25 @@ export default {
 					name: "Шнурки",
 					previewUrl: require("./models/shoeModel0/areasPreview/shoelace.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#FFFFFF",
+						},
+						black: {
+							name: "Черный",
+							hex: "#262626",
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFCB26",
+						},
+						red: {
+							name: "Красный",
+							hex: "#F7433F",
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#4DB6AC",
 						},
 					},
 				},
@@ -92,9 +209,25 @@ export default {
 					name: "Нити",
 					previewUrl: require("./models/shoeModel0/areasPreview/shoelaceYarn.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#EFEFEF",
+						},
+						black: {
+							name: "Черный",
+							hex: "#464646",
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFC714",
+						},
+						red: {
+							name: "Красный",
+							hex: "#F86360",
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#4DB6AC",
 						},
 					},
 				},
@@ -102,9 +235,25 @@ export default {
 					name: "Лого насок",
 					previewUrl: require("./models/shoeModel0/areasPreview/none.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#EFEFEF",
+						},
+						black: {
+							name: "Черный",
+							hex: "#363636",
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFD54F",
+						},
+						red: {
+							name: "Красный",
+							hex: "#F7433F",
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#4DB6AC",
 						},
 					},
 				},
@@ -112,9 +261,25 @@ export default {
 					name: "Подошва носок",
 					previewUrl: require("./models/shoeModel0/areasPreview/soleFront.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#EFEFEF",
+						},
+						black: {
+							name: "Черный",
+							hex: "#333333",
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#F3BE15",
+						},
+						red: {
+							name: "Красный",
+							hex: "#D6302D",
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#499E96",
 						},
 					},
 				},
@@ -122,9 +287,25 @@ export default {
 					name: "Подошва пятка",
 					previewUrl: require("./models/shoeModel0/areasPreview/soleBeck.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#FFFFFF",
+						},
+						black: {
+							name: "Черный",
+							hex: "#383838",
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#FFCC2B",
+						},
+						red: {
+							name: "Красный",
+							hex: "#E53936",
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#52B1A8",
 						},
 					},
 				},
@@ -132,9 +313,40 @@ export default {
 					name: "Подошва",
 					previewUrl: require("./models/shoeModel0/areasPreview/sole.webp"),
 					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
+						white: {
+							name: "Белый",
+							hex: "#EFEFEF",
+							positionColor: {
+								sole_logo: "#333333",
+							},
+						},
+						black: {
+							name: "Черный",
+							hex: "#333333",
+							positionColor: {
+								sole_logo: "#EFEFEF",
+							},
+						},
+						yellow: {
+							name: "Желтый",
+							hex: "#F3BE15",
+							positionColor: {
+								sole_logo: "#333333",
+							},
+						},
+						red: {
+							name: "Красный",
+							hex: "#D6302D",
+							positionColor: {
+								sole_logo: "#333333",
+							},
+						},
+						teal: {
+							name: "Чирок",
+							hex: "#499E96",
+							positionColor: {
+								sole_logo: "#EFEFEF",
+							},
 						},
 					},
 				},

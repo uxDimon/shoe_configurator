@@ -42,7 +42,8 @@ export default {
 .shoeConfig__wrap {
   display: flex;
   align-items: stretch;
-  height: 900px;
+  height: 100vh;
+  min-height: 900px;
 }
 
 .shoeConfig__object {

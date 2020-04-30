@@ -7,12 +7,9 @@
       :key="index"
       @click="choiceColor(color, areaKey)"
     >
-      <div class="colorButton__color" :style="{backgroundColor: color.hex}">
-        <div
-          class="colorButton__border"
-          v-show="selectedColorArea[areaKey].hex == color.hex"
-          :style="{borderColor: color.hex}"
-        ></div>
+      <div class="colorButton__color" :style="{'--colorHex': color.hex}">
+        <div class="colorButton__borderHover"></div>
+        <div class="colorButton__border" v-show="selectedColorArea[areaKey].hex == color.hex"></div>
       </div>
       {{color.name}}
     </button>
@@ -58,9 +55,14 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   height: 120px;
   border: none;
   width: 50%;
+
+  &:hover .colorButton__borderHover {
+    border-color: #d1d1d1;
+  }
 }
 
 .colorButton__color {
@@ -68,18 +70,26 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--colorHex);
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
-.colorButton__border {
+.colorButton__border,
+.colorButton__borderHover {
   position: absolute;
   width: calc(100% + 8px);
   height: calc(100% + 8px);
   border-radius: 100px;
-  border: 3px solid;
+  border: rgba(0, 0, 0, 0) 3px solid;
+
+  transition: border-color 70ms ease-in 0ms;
+}
+
+.colorButton__border {
+  border-color: var(--colorHex);
 }
 </style>

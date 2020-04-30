@@ -6,7 +6,10 @@
         v-for="(area, key) of activeCustoObject.colors"
         :key="key"
         @click="addData(area, key)"
-      >{{key}}</button>
+      >
+        {{key}}
+        <div class="areaButton__colorArea" :style="{'--colorArea': selectedColorArea[key].hex}"></div>
+      </button>
     </div>
     <app-color-change-manu></app-color-change-manu>
   </div>
@@ -27,6 +30,9 @@ export default {
     },
     showManu() {
       return this.$store.state.colorChoiceManu.showManu;
+    },
+    selectedColorArea() {
+      return this.$store.state.customObject.selectedOptions;
     }
   },
   components: {
@@ -49,6 +55,7 @@ export default {
 }
 
 .areaButton {
+  position: relative;
   cursor: pointer;
   height: 120px;
   border: none;
@@ -58,6 +65,17 @@ export default {
   &:hover {
     background-color: #ebebeb;
   }
+}
+
+.areaButton__colorArea {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--colorArea);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .areaButton_100 {

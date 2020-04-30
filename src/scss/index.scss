@@ -10,6 +10,7 @@ body {
 	background-color: $bacColor;
 	font-family: $fontFamily1;
 	color: $textColor;
+	box-sizing: border-box;
 }
 
 .mainWrap {

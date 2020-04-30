@@ -47,6 +47,7 @@ export default {
 }
 
 .shoeConfig__object {
+  margin-top: -50px;
   width: 900px;
 }
 </style>

@@ -4,96 +4,148 @@ export default {
 			name: "Название модели0",
 			colors: {
 				logoFront: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/none.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
 				body: {
-					read: {
-						name: "Красный",
-						hex: "#e53935",
-					},
-					blue: {
-						name: "Синий",
-						hex: "#1E88E5",
-					},
-					green: {
-						name: "Зеленый",
-						hex: "#43A047",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/body.webp"),
+					colorsArea: {
+						read: {
+							name: "Красный",
+							hex: "#e53935",
+						},
+						blue: {
+							name: "Синий",
+							hex: "#1E88E5",
+						},
+						green: {
+							name: "Зеленый",
+							hex: "#43A047",
+						},
 					},
 				},
 				inside: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
-					},
-					purple: {
-						name: "Пурпурный",
-						hex: "#BA68C8",
-						positionColor: {
-							inside_labelLogo: "#fff",
-							inside_label: "#8E24AA",
-							inside_side: "#AB47BC",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/inside.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
 						},
-					},
-					lightBlue: {
-						name: "Светлоголубой",
-						hex: "#4FC3F7",
-						positionColor: {
-							inside_labelLogo: "#01579B",
-							inside_label: "#039BE5",
+						purple: {
+							name: "Пурпурный",
+							hex: "#BA68C8",
+							positionColor: {
+								inside_labelLogo: "#fff",
+								inside_label: "#8E24AA",
+								inside_side: "#AB47BC",
+							},
+						},
+						lightBlue: {
+							name: "Светлоголубой",
+							hex: "#4FC3F7",
+							positionColor: {
+								inside_labelLogo: "#01579B",
+								inside_label: "#039BE5",
+							},
 						},
 					},
 				},
 				sideLogo: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/sideLogo.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
 				sideText: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/none.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
 				side: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/side.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
 				shoelace: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/shoelace.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
 				shoelaceYarn: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/shoelaceYarn.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
 				soleFront: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/soleFront.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
 				soleBeck: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/soleBeck.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
 				sole: {
-					pinc: {
-						name: "Розовый",
-						hex: "#E91E63",
+					name: "Основа",
+					previewUrl: require("./models/shoeModel0/areasPreview/sole.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
 					},
 				},
+			},
+			viewingAnglesPreview: {
+				left: require("./models/shoeModel0/viewingAnglesPreview/left.webp"),
+				anfledView: require("./models/shoeModel0/viewingAnglesPreview/anfledView.webp"),
+				right: require("./models/shoeModel0/viewingAnglesPreview/right.webp"),
+				fromAbove: require("./models/shoeModel0/viewingAnglesPreview/fromAbove.webp"),
+				behind: require("./models/shoeModel0/viewingAnglesPreview/behind.webp"),
+				heel: require("./models/shoeModel0/viewingAnglesPreview/heel.webp"),
 			},
 			viewingAngles: {
 				left: {

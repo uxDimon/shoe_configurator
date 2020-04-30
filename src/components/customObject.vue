@@ -83,7 +83,7 @@
               :d="arias.vectorP"
               fill="rgba(0, 0, 0, 0)"
               fill-rule="evenodd"
-              @click="addData(activeCustoObject.colors[indexC], indexC)"
+              @click="addData(activeCustoObject.colors[indexC].colorsArea, indexC)"
             />
           </g>
         </g>

@@ -4,8 +4,9 @@
       class="viewingButton"
       v-for="(viewingAngles, key) of getActiveCustoObject.viewingAngles"
       :key="key.id"
+      :style="{'--viewingPreview': 'url(' + getActiveCustoObject.viewingAnglesPreview[key] + ')'}"
       @click="choiceActiveViewingAngles(key)"
-    >{{key}}</button>
+    ></button>
   </div>
 </template>
 
@@ -31,11 +32,19 @@ export default {
 }
 
 .viewingButton {
-  width: 60px;
-  height: 60px;
-  border: #dddddd 2px solid;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: none;
   border-radius: 4px;
   margin-right: 30px;
+  background: var(--viewingPreview) no-repeat center;
+  background-size: 120%;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
 
   &:last-child {
     margin-right: 0;

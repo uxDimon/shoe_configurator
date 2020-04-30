@@ -5,9 +5,10 @@
         class="colorChangeArea__button areaButton"
         v-for="(area, key) of activeCustoObject.colors"
         :key="key"
-        @click="addData(area, key)"
+        @click="addData(area.colorsArea, key)"
       >
-        {{key}}
+        <div class="areaButton__preview" :style="{'--previewArea': 'url(' + area.previewUrl + ')'}"></div>
+        <span>{{area.name}}</span>
         <div class="areaButton__colorArea" :style="{'--colorArea': selectedColorArea[key].hex}"></div>
       </button>
     </div>
@@ -57,6 +58,10 @@ export default {
 .areaButton {
   position: relative;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 120px;
   border: none;
   font-family: "Inter", sans-serif;
@@ -67,10 +72,16 @@ export default {
   }
 }
 
+.areaButton__preview {
+  width: 100px;
+  height: 50px;
+  background: var(--previewArea) no-repeat;
+}
+
 .areaButton__colorArea {
   position: absolute;
-  top: 10px;
-  left: 25%;
+  top: 15px;
+  left: calc(50% - 50px);
   width: 20px;
   height: 20px;
   border-radius: 20px;

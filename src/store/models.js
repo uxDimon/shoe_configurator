@@ -3,16 +3,6 @@ export default {
 		shoeModel0: {
 			name: "Название модели0",
 			colors: {
-				logoFront: {
-					name: "Основа",
-					previewUrl: require("./models/shoeModel0/areasPreview/none.webp"),
-					colorsArea: {
-						pinc: {
-							name: "Розовый",
-							hex: "#E91E63",
-						},
-					},
-				},
 				body: {
 					name: "Основа",
 					previewUrl: require("./models/shoeModel0/areasPreview/body.webp"),
@@ -32,7 +22,7 @@ export default {
 					},
 				},
 				inside: {
-					name: "Основа",
+					name: "Язычок / Внутренний слой",
 					previewUrl: require("./models/shoeModel0/areasPreview/inside.webp"),
 					colorsArea: {
 						pinc: {
@@ -59,7 +49,7 @@ export default {
 					},
 				},
 				sideLogo: {
-					name: "Основа",
+					name: "Бортик лого",
 					previewUrl: require("./models/shoeModel0/areasPreview/sideLogo.webp"),
 					colorsArea: {
 						pinc: {
@@ -69,7 +59,7 @@ export default {
 					},
 				},
 				sideText: {
-					name: "Основа",
+					name: "Бортик текст",
 					previewUrl: require("./models/shoeModel0/areasPreview/none.webp"),
 					colorsArea: {
 						pinc: {
@@ -79,7 +69,7 @@ export default {
 					},
 				},
 				side: {
-					name: "Основа",
+					name: "Бортик",
 					previewUrl: require("./models/shoeModel0/areasPreview/side.webp"),
 					colorsArea: {
 						pinc: {
@@ -89,7 +79,7 @@ export default {
 					},
 				},
 				shoelace: {
-					name: "Основа",
+					name: "Шнурки",
 					previewUrl: require("./models/shoeModel0/areasPreview/shoelace.webp"),
 					colorsArea: {
 						pinc: {
@@ -99,7 +89,7 @@ export default {
 					},
 				},
 				shoelaceYarn: {
-					name: "Основа",
+					name: "Нити",
 					previewUrl: require("./models/shoeModel0/areasPreview/shoelaceYarn.webp"),
 					colorsArea: {
 						pinc: {
@@ -108,8 +98,18 @@ export default {
 						},
 					},
 				},
+				logoFront: {
+					name: "Лого насок",
+					previewUrl: require("./models/shoeModel0/areasPreview/none.webp"),
+					colorsArea: {
+						pinc: {
+							name: "Розовый",
+							hex: "#E91E63",
+						},
+					},
+				},
 				soleFront: {
-					name: "Основа",
+					name: "Подошва носок",
 					previewUrl: require("./models/shoeModel0/areasPreview/soleFront.webp"),
 					colorsArea: {
 						pinc: {
@@ -119,7 +119,7 @@ export default {
 					},
 				},
 				soleBeck: {
-					name: "Основа",
+					name: "Подошва пятка",
 					previewUrl: require("./models/shoeModel0/areasPreview/soleBeck.webp"),
 					colorsArea: {
 						pinc: {
@@ -129,7 +129,7 @@ export default {
 					},
 				},
 				sole: {
-					name: "Основа",
+					name: "Подошва",
 					previewUrl: require("./models/shoeModel0/areasPreview/sole.webp"),
 					colorsArea: {
 						pinc: {

@@ -1,6 +1,7 @@
 <template>
   <div class="customObject">
     <div
+      class="customObject__wrap"
       v-for="(viewingAngles, index) in activeCustoObject.viewingAngles"
       :key="index"
       v-show="index == activeViewingAngles"
@@ -88,6 +89,7 @@
           </g>
         </g>
       </svg>
+      <div class="customObject__shadow" :class="'shadow_' + index"></div>
     </div>
   </div>
 </template>
@@ -126,8 +128,11 @@ export default {
 </script>
 
 <style lang="scss">
-.test111 {
-  box-shadow: 0px 0px 10px #000000;
+.customObject__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .customObjectSvg__colorLaer {
@@ -147,5 +152,36 @@ export default {
   &:hover {
     fill: url(#patternArea);
   }
+}
+
+.customObject__shadow {
+  position: absolute;
+  bottom: 0;
+  height: 20%;
+  background: radial-gradient(
+    50% 25.93% at 50% 50%,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(42, 42, 42, 0.1) 25%,
+    rgba(82, 82, 82, 0) 100%
+  );
+}
+
+.shadow_left,
+.shadow_right,
+.shadow_heel {
+  width: 90%;
+}
+
+.shadow_anfledView {
+  width: 95%;
+}
+
+.shadow_fromAbove {
+  width: 55%;
+  bottom: -5%;
+}
+
+.shadow_behind {
+  width: 70%;
 }
 </style>

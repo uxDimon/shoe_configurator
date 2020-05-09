@@ -197,6 +197,7 @@ export default {
     rgba(42, 42, 42, 0.1) 25%,
     rgba(82, 82, 82, 0) 100%
   );
+  z-index: -1;
 }
 
 .shadow_left,

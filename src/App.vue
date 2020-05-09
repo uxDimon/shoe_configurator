@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="shoeConfig">
-    <h1 class="startH">111</h1>
     <div class="shoeConfig__wrap">
       <div class="shoeConfig__object">
         <app-custom-object></app-custom-object>

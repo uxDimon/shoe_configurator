@@ -15,7 +15,14 @@
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
         >
-          <g class="customObject__area" v-for="(arias, indexA) of viewingAngles" :key="indexA">
+          <g>
+            <image x="0" y="0" width="900" height="900" :xlink:href="viewingAngles.imgUrl" />
+          </g>
+          <g
+            class="customObject__area"
+            v-for="(arias, indexA) of viewingAngles.alpa"
+            :key="indexA"
+          >
             <g
               class="customObject__areaPosition customObjectSvg"
               v-for="(position, indexP) of arias.position"
@@ -40,20 +47,16 @@
                   :fill="'url(#pattern' + index + indexP + indexA +')'"
                 />
               </mask>
-              <g :mask="'url(#mask' + index + indexP + indexA +')'">
+              <g
+                :mask="'url(#mask' + index + indexP + indexA +')'"
+                class="customObjectSvg__multiplyLaer"
+              >
                 <rect
                   width="900"
                   height="900"
                   :fill="areasColor(indexA, indexP)"
                   class="customObjectSvg__colorLaer"
                 />
-                <g class="customObjectSvg__multiplyLaer">
-                  <rect
-                    width="900"
-                    height="900"
-                    :fill="'url(#pattern' + index + indexP + indexA +')'"
-                  />
-                </g>
               </g>
               <defs>
                 <pattern
@@ -82,7 +85,7 @@
                 <polygon points="10 9 10 10 9 10" />
               </g>
             </pattern>
-            <g v-for="(arias, indexC) of viewingAngles" :key="indexC">
+            <g v-for="(arias, indexC) of viewingAngles.alpa" :key="indexC">
               <path
                 class="customObject__borderArea"
                 v-if="arias.vectorP"
